@@ -1,0 +1,65 @@
+   0 sudo apt ugrade
+   1 sudo update
+   2 sudo get apt
+   3 whoami
+   4 cd main
+   5 mkdir
+   6 -m
+   7 m
+   8 remove --help
+   9 rename
+  10 rename --help
+  11 touch 
+  12 cd
+  13 cd / 
+  14 cd /
+  15 list
+  16 ls
+  17 ls --help
+  18 ls -a
+  19 ls -l
+  20 cd /home
+  21 mkdir user1
+  22 cd user1
+  23 ls
+  24 cd task1
+  25 mkdir task1
+  26 cd task1/
+  27 touch file.txt
+  28 ls
+  29 cd
+  30 pwd
+  31 tree
+  32 clear
+  33 tree
+  34 tree /
+  35 clear
+  36 tree /home
+  37 cd
+  38 mkdir /home/user2/task2
+  39 mkdir --help
+  40 mkdir -p home/user2/task2
+  41 touch /home/user2/task2/file2.txt
+  42 mkdir -p home/user2/task2
+  43 touch /home/user2/task2/file2.txt
+  44 touch home/user2/task2/file2.txt
+  45 mkdir -p home/user2/task2/ivan
+  46 mkdir /home/user3 /opt/user1 /tmp/user1
+  47 tree /home
+  48 clear
+  49 touch /home/user3/file3.txt opt/user1/file2.txt tmp/user1/file2.txt
+  50 touch /home/user3/file3.txt /opt/user1/file2.txt /tmp/user1/file2.txt
+  51 mkdir /tmp/user2/ && touch /tmp/user2/file3.txt
+  52 date
+  53 cp /home/user1/task1/file1.txt /
+  54 cp /home/user1/task1/file.txt /
+  55 ls /
+  56 mv /home/user2/task2/file2.txt /var/1.txt
+  57 cp /home /sys/
+  58 cp -R /home /sys/
+  59 cp -R /home /opt/
+  60 rm -rf /tmp/user1
+  61 ls /tmp/
+  62 tree /tmp/
+  63 history
+  64 history > history.txt 
