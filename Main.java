@@ -9,7 +9,7 @@ public class Main {
 
         //фраза из которой вырезаем
         Scanner sc1 = new Scanner(System.in);
-        System.out.println("Введите знаменитую фразу кота Леопольда: ");
+        System.out.println("Введите знаменитую фразу кота Леопольда или любую другую: ");
         String st1 = sc1.nextLine();
 
 //слово которое вырезаем
