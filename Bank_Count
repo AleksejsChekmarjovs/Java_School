@@ -1,0 +1,38 @@
+
+import java.util.Scanner;
+
+
+
+
+
+//банкомат выдает и списывает со счета
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        //сосотояние счета
+
+        int bankCount = 10000;
+        //лимит на единовременное снятие
+        int cashWithrowLimit = 2001;
+        //лимит на кол-во снятий в сутки
+        int withrowLimit = 10;
+        //пользователь вводит с клавы сумму снятия
+        Scanner scanner = new Scanner(System.in);
+        do {
+            System.out.println("состояние вашегосчета: " + bankCount);
+            System.out.println("лимит на снятие наличности: " + cashWithrowLimit);
+            System.out.println("снятий оталось " +  withrowLimit);
+            int withdrow = scanner.nextInt();
+            if (withdrow < bankCount && cashWithrowLimit > withdrow && withrowLimit > 0){
+                bankCount = bankCount - withdrow;
+                withrowLimit --;
+            };
+        }while (withrowLimit > 0);
+
+
+
+
+    }
+}
