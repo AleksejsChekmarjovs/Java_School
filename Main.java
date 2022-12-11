@@ -1,66 +1,52 @@
 
-//
-//        First level: Разработать программу для управления "Умным домом".
-//        С клавиатуры вводится:
-//
-//        текущее время (в часах от 0 до 23)
-////        текущий день недели
-////       включена ли сигнализация
-
-//        "Умный дом" должен реализовать следующие сценарии:
-//        1) В будний день в 8ч поднять шторы, если хозяева дома (сигнализация отключена)
-//        2) В выходной день в 11ч поднять шторы, если хозяева дома
-//        3) В будний день в 20ч вечера включить чайник, если хозяев нет дома
-//        4) В будний день в 23ч опустить шторы, если шторы были подняты
-//        Выполнение действия обозначать выводом соответствующего сообщения на экран.
+//Дан массив, содержащий все возможные номиналы игральных карт: 6, 7, …, Король, Туз.
+//Дан массив, содержащий все возможные масти игральных карт: "Пик", "Треф", "Бубен", "Червей".
+//Пользователь вводит количество карт, которое ему нужно выдать.
+//Программа случайным образом выбирает из массивов значения номиналов и мастей и выводит требуемое количество карт на экран.
 
 
 import java.util.Scanner;
 
 public class Main {
-
-
     public static void main(String[] args) {
 
-        Scanner scTime = new Scanner(System.in);
-        System.out.println("Enter time 0 - 24: ");
-        int time = scTime.nextInt();
 
-        Scanner scWeekDays = new Scanner(System.in);
-        System.out.println("Enter day of week 1 - 7: ");
-        int weekDays = scWeekDays.nextInt();
+        //номинал карты
+        String[] cardsNums = {"6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"};
 
-        Scanner csSignalization = new Scanner(System.in);
-        System.out.println("Enter 1 if signalization is ON or 2 if signalization is OFF:");
-        int signalization = csSignalization.nextInt();
-
-        boolean signalizationOn = signalization < 2;
+        //масти
+        String[] suits = {"Diamonds", "Hearts", "Clubs", "Spades"};
 
 
+//размер колоды
+        int cardQ = cardsNums.length * suits.length;
+
+        //узнаем сколко карт надо раздать
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ВВедите сколько карт раздать: ");
+        int cardsInGame = sc.nextInt();
 
 
+//колода
+        String[] deck = new String[cardQ];
+        for (int i = 0; i < cardsNums.length; i++) {
+            for (int j = 0; j < suits.length; j++) {
+                deck[suits.length * i + j] = cardsNums[i] + " " + suits[j];
+            }
+        }
+
+        //тосуем колоду
+        for (int i = 0; i < cardQ; i++) {
+            int r = i + (int) (Math.random() * (cardQ - i));
+            String temp = deck[r];
+            deck[r] = deck[i];
+            deck[i] = temp;
+        }
 
 
-
-        boolean kettleIsHot = time >= 20 && weekDays < 6 != signalizationOn;
-
-        boolean curtainsUp = ((time >= 8 && time < 23 && weekDays < 6) != signalizationOn) || (time >= 11 && weekDays > 5 != signalizationOn);
-
-if (signalizationOn){
-    System.out.println("Nobody is home");
-}else {
-    System.out.println("sombody is home");
-}
-if (kettleIsHot){
-    System.out.println("Kettle is hot");
-}else {
-    System.out.println("Kettle is cold");
-}
-if (curtainsUp){
-    System.out.println("Curtains are Up");
-}else {
-    System.out.println("Curtains are closed");
-}
+        for (int i = 0; i < cardsInGame; i++) {
+            System.out.println(deck[i]);
+        }
 
 
     }
