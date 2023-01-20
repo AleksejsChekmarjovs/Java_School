@@ -1,0 +1,27 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner phrase = new Scanner(System.in);
+        System.out.println("Введите фразу без знаков препинания и я ее дислексирую ХАХАХА :");
+        String yourPhrase = phrase.nextLine();
+
+        String[] arr = yourPhrase.split(" ");
+
+
+        for (String retval : yourPhrase.split(" ")) {
+            char[] chars = retval.toCharArray();
+            Arrays.sort(chars);
+            String str = new String(chars);
+
+            System.out.println(str);
+
+        }
+    }
+
+
+}
+
+
+
