@@ -7,7 +7,7 @@ public class Main {
         System.out.println("Введите фразу без знаков препинания и я ее дислексирую ХАХАХА :");
         String yourPhrase = phrase.nextLine();
 
-        String[] arr = yourPhrase.split(" ");
+     
 
 
         for (String retval : yourPhrase.split(" ")) {
