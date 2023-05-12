@@ -1,4 +1,4 @@
-package HW_metodichka_6;
+package hm_metodichka_6;
 
 /* Домашнее задание
 Создать классы Cat и Dog с наследованием от класса Animal.
@@ -28,28 +28,32 @@ public abstract class Animal {
         animalCount++;
     }
 
-        public void run(int distance){
-            if (distance <= maxRunDistance){
-                System.out.println(name + " ran " + distance + " meters.");
-            } else {
-                System.out.println(name + " cant run " + distance + " meters.");
-            }
+    //print animals runs
+    public void run(int distance) {
+        if (distance <= maxRunDistance) {
+            System.out.println(name + " ran " + distance + " meters.");
+        } else {
+            System.out.println(name + " cant run " + distance + " meters.");
         }
+    }
 
-        public void swim(int distance){
-            if (maxSwimDistance == 0){
-                System.out.println(name + " cant swim. " );
-            }if (distance <= maxSwimDistance){
-                System.out.println(name + " swam " + distance + " meters.");
-            }
-                else {
-                System.out.println(name + " cant swim " + distance + " meters.");
-            }
+    //print animals swims
+    public void swim(int distance) {
+        if (maxSwimDistance == 0) {
+            System.out.println(name + " cant swim. ");
         }
-        public static int getCount() {
+        if (distance <= maxSwimDistance) {
+            System.out.println(name + " swam " + distance + " meters.");
+        } else {
+            System.out.println(name + " cant swim " + distance + " meters.");
+        }
+    }
+
+    //count animals
+    public static int getCount() {
         return animalCount;
     }
-    }
+}
 
 
 
