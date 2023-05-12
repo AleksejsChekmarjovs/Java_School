@@ -1,5 +1,11 @@
 package hm_metodichka_6;
 
+
+/*
+* Java Homework Nr3
+* @autor Aleksejs Cekmarjovs
+* version 12 May 2023*/
+
 public class Task_6 {
 
     public static void main(String[] args) {
