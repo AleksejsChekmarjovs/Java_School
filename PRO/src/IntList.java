@@ -4,7 +4,9 @@
 
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class IntList {
     public static void main(String[] args) {
@@ -17,15 +19,27 @@ public class IntList {
         integers.add(99);
         integers.add(205);
 
+        int x = 10;
+        int y = 160;
+
         System.out.println("Original List: " + integers);
 
-        for (int i = 0; i < integers.size(); i++) {
-            if (integers.get(i) >= 10 && integers.get(i) <= 160){
-                integers.remove(i);
+        ListIterator<Integer> integer = integers.listIterator();
+        while (integer.hasNext()) {
+            int numer = integer.next();
+            if (numer <= y && numer >= x) {
+                integer.remove();
+            }
 
-        }
 
         }
         System.out.println("List after removing: " + integers);
+
+
     }
+
+
 }
+
+
+
