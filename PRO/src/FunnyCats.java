@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 //Задания 1) Дан список (List) из слов.
 // Нужно поменять порядок слов в списке на противоположный.
@@ -13,8 +10,18 @@ public class FunnyCats {
 
         System.out.println("Original List: " + words);
 
-        Collections.reverse(words);
 
-        System.out.println("reversed List: " + words);
+        List<String> reversedWords = reverseList(words);
+
+        System.out.println("Reversed list: " + reversedWords);
+    }
+
+    public static List<String> reverseList(List<String> list) {
+        List<String> reversedList = new ArrayList<>();
+        Iterator<String> iterator = list.iterator();
+        while (iterator.hasNext()) {
+            reversedList.add(0, iterator.next());
+        }
+        return reversedList;
     }
 }
