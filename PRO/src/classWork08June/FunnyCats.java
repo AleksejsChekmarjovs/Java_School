@@ -1,3 +1,5 @@
+package classWork08June;
+
 import java.util.*;
 
 //Задания 1) Дан список (List) из слов.
@@ -21,6 +23,7 @@ public class FunnyCats {
         Iterator<String> iterator = list.iterator();
         while (iterator.hasNext()) {
             reversedList.add(0, iterator.next());
+
         }
         return reversedList;
     }
