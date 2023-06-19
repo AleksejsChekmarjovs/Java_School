@@ -12,18 +12,33 @@ package clwork_13_July.task2;
 // Для операций вставки в середину списка и удаления из середины списка используйте Iterator (методы it.add(value); и it.remove();).
 // На основании полученных данных сделайте выводы, имеет ли смысл исполь
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
-
 public class ClassWorkTask2 {
+    private static int LIST_SIZE = 10000;
 
     public static void main(String[] args) {
         ArrList arrList = new ArrList();
+        LIList liList = new LIList();
+
+
         arrList.arrEndAdding();
+        liList.linListEndAdding();
+        System.out.println("------------------------------------");
+
         arrList.arrMidlleAdding();
+        liList.linkedListMidlleAdding();
+        System.out.println("--------------------------------------");
+
         arrList.gettingUnits();
+        liList.gettingUnits();
+        System.out.println("----------------------");
+
+        arrList.deletFromEnding();
+        liList.deletFromEnding();
+        System.out.println("---------------------------");
+
+        liList.deleteFromMidlle();
+        arrList.deleteFromMidlle();
+
 
 
 
