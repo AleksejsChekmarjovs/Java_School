@@ -45,6 +45,7 @@ public class Main {
         druzjaIzChata.add(new Druzja("Sem"));
         druzjaIzChata.add(new Druzja("Vanja"));
         druzjaIzChata.add(new Druzja("Ljoha"));
+        druzjaIzChata.add(new Druzja("Denis Shabalin"));
 
         int viborSifi = nextHittingPerson((druzjaIzChata.size()));
         Druzja sifa = druzjaIzChata.get(viborSifi);
