@@ -2,10 +2,10 @@ public class Druzja {
     String name;
     int coount = 0;
     boolean isSwitchedLightOn = false;
-   public int counting(){
-       coount = coount + 1;
-       return coount;
-   }
+
+    public void counting() {
+        coount = coount + 1;
+    }
 
 
     public Druzja(String name) {
@@ -13,14 +13,12 @@ public class Druzja {
     }
 
 
-
     @Override
     public String toString() {
         return ' ' + name + ' ' + "poluchil " +
-               coount + " poshochin"
-               ;
+                coount + " poshochin"
+                ;
     }
-
 
 
 }
